@@ -1,16 +1,266 @@
----
-layout: reveal
-title: not used. Use _config.yml!
----
-<style>
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jekyll and Reveal.js</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/league.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+            <div class="slides">
+
+                <style>
 .reveal sup {
   font-size: 12px;
 }
 </style>
-{% for post in site.posts reversed %}
+
 <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
 <script type="text/template">
-{{ post.content }}
+# Merits of TDD 
+
+### Mark Lawlor (@mwlawlor)
+
+---
+
+![essence of programming](/bullion-capital.png)
+
+---
+
+> A tester walks into a bar and orders a beer.
+>
+> Then he orders 999,999 beers. Orders 0 beers. Orders -1 beers. 
+>
+> Orders a cat. Orders a qpoijzcpx. Then he insults the bartender.
+
 </script>
 </section>
-{% endfor %}
+
+<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+<script type="text/template">
+## working effectively
+
+- Rework your to-do list.
+- Measure your results, not your time.
+- Build habits to help you start working.
+- Track where you waste time. 
+- Build habits to help you stop working.
+
+<sup>Top result of googling 'working effectively': [5 Incredibly Effective Ways to Work Smarter, Not Harder - Jeff Haden, www.inc.com](http://www.inc.com/jeff-haden/5-incredibly-effective-ways-to-work-smarter-not-harder.html)</sup>
+
+---
+
+## Programming Truths
+
+- Anything that can break, will break (it worked yesterday!)
+- The end user will always do something stupidly wrong
+- Behind every application is a terrifying number of hacks
+- Programming is best done 'in the zone'
+- Sleeping on a problem can solve the problem
+
+---
+
+![essence of programming](/the-essence-of-programming.png)
+
+---
+
+TDD incorporates these programming truths into an effective work flow
+
+---
+
+![workflow](/workflow.png)
+
+---
+
+## Tests = Specification
+
+</script>
+</section>
+
+<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+<script type="text/template">
+## As an Individual...
+
+My Goals:
+
+1. Automate everything <!-- .element: class="fragment" -->
+2. Be DRY <!-- .element: class="fragment" -->
+3. Don't do any work <!-- .element: class="fragment" -->
+
+---
+
+## As an Individual...
+
+TDD helps by: 
+
+- Breaking down the features/issues
+- Forces the developer to document their understanding
+- Provides a single focus point and set of goals
+- Specs reveal missing functionality or requirements
+- Specs reveal common functionality
+- Specs force code to be released in a structured manner
+- Tests provide a stopping a stopping point
+- Provides progression data and better reporting
+- Code confidence
+
+</script>
+</section>
+
+<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+<script type="text/template">
+## As an Team...
+
+- Specs define the system
+- Requirements are directly linked to codebase
+- Confidence in team members
+- Higher moral
+- Specs are easier to allocate than features
+- Help provide documentation
+- Automated testing provides the assurance the your system is still working
+
+
+
+</script>
+</section>
+
+<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+<script type="text/template">
+## As a company
+
+- Maintainable, flexible, easily extensible applications
+- Improved reporting
+- Clean code interface
+- Better tasks assignment
+- Improved time estimates
+- Streamlined support documentation
+- Encourage development prototypes
+- Shorter development feedback
+
+---
+
+Microsoft and IBM performed a collaborative study on the development time of multiple teams using TDD.
+
+TLDR: Teams took ~20% more time to create a feature, but 40%-90% less bugs
+
+![tdd_graph](/tdd_casestudy.png)
+
+<sup>[http://research.microsoft.com/en-us/groups/ese/nagappan_tdd.pdf](http://research.microsoft.com/en-us/groups/ese/nagappan_tdd.pdf)</sup>
+</script>
+</section>
+
+<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+<script type="text/template">
+### So if its so good, why doesn't everyone do it?
+
+---
+
+### Because its hard to start
+
+- You need to break your habits
+- Everyone needs to be 100% committed
+- Everyones starting experience is different
+- Requires the company to value quality over time
+
+---
+
+Frameworks help structure code
+
+Methodologies help structure work-flow
+
+---
+
+The industry is moving, don't let your habits slow you down
+
+</script>
+</section>
+
+<section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$" data-notes="^Note:">
+<script type="text/template">
+So TDD is cool, how do I start?
+
+---
+
+### TDD Workflows: Build the right work flow for your application
+
+> Coming next meetup!
+
+---
+
+# Mark Lawlor
+
+* Twitter: @mwlawlor
+* Github: @marklawlor
+
+
+</script>
+</section>
+
+
+
+            </div>
+
+		</div>
+
+		<script src="reveal.js/lib/js/head.min.js"></script>
+		<script src="reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    
+                    
+				]
+			});
+
+		</script>
+    <script src="http://localhost:35729/livereload.js"></script>
+	</body>
+</html>
